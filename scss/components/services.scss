@@ -1,0 +1,139 @@
+.services {
+  margin-bottom: 60px;
+
+  &__title {
+    font-family: $unbounded;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: #292521;
+    margin-bottom: 140px;
+
+    span {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 42px;
+    }
+
+    @media (max-width: 460px) {
+      font-size: 28px;
+      margin-bottom: 40px;
+      line-height: 50px;
+    }
+  }
+
+  .services__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+
+    &-item {
+      padding-top: 120px;
+      padding-left: 40px;
+      padding-bottom: 60px;
+      flex-basis: 32%;
+      width: 100%;
+      background: linear-gradient(180deg, #9D41D5 0%, #7C01C7 100%);
+      border-radius: 20px;
+      margin-top: 100px;
+
+      @media (max-width: 768px) {
+        flex-basis: 48%;
+      }
+
+      @media (max-width: 460px) {
+        justify-content: center;
+        flex-basis: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      &-item:nth-child(-n+2) {
+        margin-top: 0;
+      }
+
+      &-item:nth-child(-n+3) {
+        margin-top: 100px !important;
+      }
+    }
+
+    &-item:nth-child(-n+3) {
+      margin-top: 0;
+    }
+  }
+}
+
+.services__list-item {
+  &:nth-child(1) .service::after {
+    content: url("../../assets/images/service-1.png");
+  }
+
+  &:nth-child(2) .service::after {
+    content: url("../../assets/images/service-2.png");
+  }
+
+  &:nth-child(3) .service::after {
+    content: url("../../assets/images/service-3.png");
+  }
+
+  &:nth-child(4) .service::after {
+    content: url("../../assets/images/service-4.png");
+  }
+
+  &:nth-child(5) .service::after {
+    content: url("../../assets/images/service-5.png");
+  }
+
+  &:nth-child(6) .service::after {
+    content: url("../../assets/images/service-6.png");
+  }
+}
+
+.service {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &::after {
+    position: absolute;
+    right: -20px;
+    top: 0;
+    z-index: 1;
+    transform: scale(0.9) translateY(-87%);
+  }
+
+  &__name {
+    z-index: 100;
+    font-family: $unbounded;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: #FFFFFF;
+
+    span {
+      display: block;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1.2em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+}

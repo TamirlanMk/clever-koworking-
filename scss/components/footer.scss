@@ -1,0 +1,125 @@
+.footer {
+  padding: 50px 0;
+  background: url("../../assets/images/booking-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (max-width: 460px) {
+    &__logo {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media (max-width: 460px) {
+      & {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    @media (max-width: 460px) {
+      & {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+    @media (max-width: 460px) {
+      font-size: 14px;
+    }
+  }
+
+  &__row:not(:last-child) {
+    margin-right: 75px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  &__row {
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 26px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 460px) {
+      & {
+        max-width: 40%;
+        width: 100%;
+        margin: 0 4px !important;
+      }
+    }
+  }
+
+  @media (max-width: 460px) {
+    .social {
+      max-width: 100% !important;
+    }
+
+    .social .footer__title {
+      margin-top: 20px;
+    }
+
+    .social,
+    .social ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .social ul li {
+      margin: 0 5px;
+    }
+
+    .social ul li a:hover {
+      text-decoration: none;
+    }
+  }
+
+}
+
+
+.footer__title {
+  font-size: 14px;
+}
+
+.footer__row ul {
+  font-size: 12px;
+}

@@ -1,0 +1,126 @@
+.community {
+  margin-bottom: 138px;
+
+  @media (max-width: 460px) {
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    font-family: $unbounded;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: #292521;
+    margin: 0 0 140px;
+
+    @media (max-width: 768px) {
+      font-size: 42px;
+    }
+
+    @media (max-width: 460px) {
+      font-size: 28px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  .slick-arrow {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 35%;
+    z-index: 100;
+
+    svg {
+      object-fit: cover;
+    }
+  }
+
+  .slick-prev {
+    left: 76px;
+
+    @media (max-width: 768px) {
+      left: 36px;
+    }
+  }
+
+  .slick-next {
+    right: 76px;
+    transform: rotate(180deg);
+
+    @media (max-width: 768px) {
+      right: 36px;
+    }
+  }
+
+  &__slide {
+    padding: 0 25px;
+    height: 400px;
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    -o-transform: scale(.85);
+    -webkit-transform: scale(.9);
+    transition: transform .2s linear;
+  }
+
+  &__slide.slick-active,
+  &__slide.slick-center {
+    transform: scale(1);
+  }
+
+  &__slide.slick-active,
+  &__slide.slick-center {
+    transform: scale(1);
+  }
+}
+
+.community__slide.slick-active,
+.community__slide.slick-center {
+  .slide__content {
+    background: rgba(124, 1, 199, 0.75);
+  }
+}
+
+.slide__content {
+  border-radius: 25px;
+  height: 100%;
+  background: rgba(124, 1, 199, 0.5);
+
+  transition: background-color .2s ease-in-out;
+}
+
+.slick-dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 20px 0 0;
+
+  li {
+    cursor: pointer;
+    margin: 0 10px;
+    display: block;
+    width: 65px;
+    height: 6px;
+    background-color: rgba(124, 1, 199, 0.25);
+
+    transition: background-color .2s ease-in-out;
+  }
+
+  .slick-active {
+    background-color: rgba(124, 1, 199, 1);
+  }
+}
+
+
+

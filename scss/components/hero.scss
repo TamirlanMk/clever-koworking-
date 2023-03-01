@@ -1,0 +1,217 @@
+.hero {
+  padding-top: 160px;
+  background-image: url("../../assets/images/hero-back.png");
+  background-repeat: no-repeat;
+  background-position: top right calc(60%);
+  background-size: cover;
+  margin-bottom: 104px;
+
+  @media (max-width: 768px) {
+    background-position: top right calc(50%);
+  }
+
+  @media (max-width: 460px) {
+    background-position: top right calc(55%);
+
+    margin-bottom: 80px;
+  }
+
+  &__container {
+    display: flex;
+
+    @media (max-width: 460px) {
+      align-items: flex-start;
+    }
+  }
+
+  &__row {
+    width: 100%;
+  }
+
+  &__row-left {
+    padding-top: 100px;
+    max-width: 48%;
+    z-index: 2;
+
+    @media (max-width: 1028px) {
+      padding-top: 0;
+    }
+  }
+
+  &__row-right {
+    z-index: 1;
+    max-width: 52%;
+  }
+
+  &__image {
+    padding-top: 40px;
+    object-fit: cover;
+
+    @media (max-width: 1028px) {
+      padding-top: 60px;
+    }
+
+    @media (max-width: 460px) {
+      padding-top: 100px;
+    }
+  }
+
+  &__title {
+    font-family: $unbounded;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 75px;
+    margin: 0 0 20px;
+
+    span {
+      display: block;
+    }
+
+    @media (max-width: 1028px) {
+      font-size: 32px;
+      line-height: 60px;
+    }
+
+    @media (max-width: 460px) {
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+  }
+
+  &__actions {
+    margin-bottom: 60px;
+    display: inline-flex;
+
+    @media (max-width: 1028px) {
+      display: flex;
+      flex-direction: row;
+
+      .btn {
+        width: fit-content;
+        margin-bottom: 20px;
+      }
+      .btn:not(:first-child) {
+        margin-left: 20px;
+      }
+    }
+
+    @media (max-width: 460px) {
+      display: flex;
+      flex-direction: column;
+
+      .btn {
+        width: fit-content;
+        margin-bottom: 20px;
+      }
+      .btn:not(:first-child) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  @media (max-width: 460px) {
+    display: none !important;
+  }
+
+  @media (max-width: 1028px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__item {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    position: relative;
+    padding-top: 45px;
+    margin-right: 20px;
+    flex-basis: calc(50% - 30px);
+  }
+
+  &-1 {
+    .cards__content {
+      background: linear-gradient(82.63deg, #FF9600 4.79%, #FDA72D 107.35%);
+    }
+
+    .cards__content::after {
+      content: url("../../assets/images/comfort.png");
+      right: -15px;
+    }
+  }
+
+  &-2 {
+    .cards__content {
+      background: linear-gradient(82.63deg, #7350FF 4.79%, #8465FF 107.35%);
+    }
+
+    .cards__content::after {
+      content: url("../../assets/images/funn.png");
+      right: -10px;
+    }
+  }
+
+  &-3 {
+    .cards__content {
+      background: linear-gradient(82.63deg, #0D8658 4.79%, #138F60 107.35%);
+    }
+
+    .cards__content::after {
+      content: url("../../assets/images/atmos.png");
+    }
+  }
+
+  &__content {
+    display: flex;
+    position: relative;
+    padding: 32px 12px;
+    background: linear-gradient(82.63deg, #FF9600 4.79%, #FDA72D 107.35%);
+    border-radius: 20px;
+  }
+
+  &__content::after {
+    z-index: 1;
+    position: absolute;
+    content: url("../../assets/images/comfort.png");
+    display: block;
+    bottom: -5px;
+    right: 0;
+    width: auto;
+    object-fit: cover;
+  }
+
+  &__item:nth-child(1) {
+    .cards__image {
+      right: -20px;
+    }
+  }
+
+  &__title {
+    z-index: 2;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 1028px) {
+      font-size: 26px;
+    }
+  }
+}

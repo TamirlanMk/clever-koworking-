@@ -1,0 +1,158 @@
+.team {
+  padding-top: 77px;
+  padding-bottom: 140px;
+  background: url("../../assets/images/booking-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (max-width: 460px) {
+    padding-top: 47px;
+    padding-bottom: 60px;
+  }
+
+  .team-prev,
+  .team-next {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    z-index: 100;
+
+    svg {
+      object-fit: cover;
+    }
+  }
+
+  &__slider {
+    &-footer {
+      padding-top: 74px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (max-width: 768px) {
+        padding-top: 54px;
+      }
+
+      @media (max-width: 460px) {
+        padding: 24px 20px 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    font-family: $unbounded;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 60px;
+
+    span {
+      display: block;
+
+      @media (max-width: 460px) {
+        display: inline-block;
+      }
+    }
+
+    @media (max-width: 768px) {
+      font-size: 42px;
+      margin-bottom: 70px;
+    }
+
+    @media (max-width: 460px) {
+      font-size: 28px;
+      line-height: 50px;
+      margin-bottom: 50px;
+    }
+  }
+
+  /* the slides */
+  .slick-slide {
+    margin: 0 30px;
+
+    @media (max-width: 768px) {
+      margin: 0 25px;
+    }
+
+    @media (max-width: 460px) {
+      margin: 0 16px;
+    }
+  }
+
+  /* the parent */
+  .slick-list {
+    margin: 0;
+
+    @media (max-width: 1028px) {
+      margin: 0;
+    }
+  }
+
+  &__slide {
+    max-width: 430px;
+    width: 100%;
+
+    &-image {
+      max-height: 364px;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    &-image::after {
+      content: '';
+      background-color: #E3E3E3;
+      display: block;
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 75%;
+      border-radius: 40px 40px 0 0;
+    }
+
+    &-content {
+      border-radius: 0 0 40px 40px;
+      padding-bottom: 22px;
+      padding-top: 30px;
+      text-align: center;
+      background-color: #D9D9D9;
+    }
+
+    &-name {
+      font-family: $unbounded;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1em;
+      text-transform: uppercase;
+      color: #7C01C7;
+    }
+
+    &-post {
+      font-family: $unbounded;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: #7C01C7;
+    }
+  }
+}
